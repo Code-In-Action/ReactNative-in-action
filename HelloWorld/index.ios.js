@@ -8,7 +8,8 @@ import React, {
   Component,
   StyleSheet,
   Text,
-  View
+  View,
+  Image,
 } from 'react-native';
 
 class HelloWorld extends Component {
@@ -16,7 +17,7 @@ class HelloWorld extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          React Native 开发实践！
+          welcome to React Native！
         </Text>
         <Text style={styles.instructions}>
           To get started, edit index.ios.js
@@ -25,6 +26,8 @@ class HelloWorld extends Component {
           Press Cmd+R to reload,{'\n'}
           Cmd+D or shake for dev menu
         </Text>
+        <Image style={styles.pic} source={{uri: 'https://avatars3.githubusercontent.com/u/6133685?v=3&s=460'}}>
+        </Image>
       </View>
     );
   }
@@ -41,12 +44,17 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textAlign: 'center',
     margin: 10,
+    color: 'red',
   },
   instructions: {
     textAlign: 'center',
     color: '#333333',
     marginBottom: 5,
   },
+  pic: {
+    width: 100,
+    height: 100,
+  }
 });
 
 AppRegistry.registerComponent('HelloWorld', () => HelloWorld);

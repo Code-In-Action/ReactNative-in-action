@@ -1,4 +1,4 @@
-import Index from 'Index'
+import Index from './pages/index'
 import {
     NavigatorIOS,
 	  AppRegistry,
